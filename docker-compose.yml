@@ -1,0 +1,30 @@
+version: "3.9"
+    
+services:
+  graphite:
+    # query test metric raw data
+    # http://localhost:8080/render?format=json&target=randomWalk(%22machines.test1%22)
+    image: graphiteapp/graphite-statsd:latest
+    restart: always
+    ports:
+      - "8080:80"
+      - "2003-2004:2003-2004"
+      - "2023-2024:2023-2024"
+      - "8125:8125/udp"
+      - "8126:8126"
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+  grafana:
+    # default dashboard
+    # http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
+    depends_on:
+      - graphite
+    image: grafana/grafana-oss:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./provisioning:/etc/grafana/provisioning
+      - ./dashboards:/dashboards
+    environment:
+        MYSQL_ROOT_PASSWORD: somewordpress
