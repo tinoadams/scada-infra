@@ -19,3 +19,5 @@ http://localhost:8080/render?format=json&target=randomWalk(%22machines.test1%22)
 Open default dashboard
 
 http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
+
+user/pass: admin/admin
