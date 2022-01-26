@@ -28,3 +28,15 @@ services:
       - ./dashboards:/dashboards
     environment:
         MYSQL_ROOT_PASSWORD: somewordpress
+  video:
+    # test video stream (use a video player like VLC to test)
+    # rtsp://localhost:8554/test
+    image: aler9/rtsp-simple-server:latest
+    restart: always
+    ports:
+      - "8554:8554"
+      - "1935:1935"
+      - "8888:8888"
+    environment:
+      RTSP_PROTOCOLS: tcp
+      RTSP_PATHS_TEST_SOURCE: rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
