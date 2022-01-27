@@ -21,3 +21,9 @@ Open default dashboard
 http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
 
 user/pass: admin/admin
+
+### Video stream
+
+Test the video stream with a video player like VLC
+
+`rtsp://localhost:8554/test`
