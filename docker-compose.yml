@@ -26,6 +26,7 @@ services:
     volumes:
       - ./provisioning:/etc/grafana/provisioning
       - ./dashboards:/dashboards
+      - ./config/grafana.ini:/etc/grafana/grafana.ini
     environment:
         MYSQL_ROOT_PASSWORD: somewordpress
   video:
