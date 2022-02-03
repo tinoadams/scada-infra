@@ -26,4 +26,4 @@ user/pass: admin/admin
 
 Test the video stream with a video player like VLC
 
-`rtsp://localhost:8554/test`
+rtsp://localhost:8554/test
