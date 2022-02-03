@@ -40,4 +40,4 @@ services:
       - "8888:8888"
     environment:
       RTSP_PROTOCOLS: tcp
-      RTSP_PATHS_TEST_SOURCE: rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
+      RTSP_PATHS_TEST_SOURCE: rtsp://rtsp.stream/pattern
