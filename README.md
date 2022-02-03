@@ -22,6 +22,12 @@ http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
 
 user/pass: admin/admin
 
+### Sample embedded graph
+
+Open
+
+index.html
+
 ### Video stream
 
 Test the video stream with a video player like VLC
