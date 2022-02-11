@@ -27,8 +27,19 @@ services:
       - ./provisioning:/etc/grafana/provisioning
       - ./dashboards:/dashboards
       - ./config/grafana.ini:/etc/grafana/grafana.ini
-    environment:
-        MYSQL_ROOT_PASSWORD: somewordpress
+#    environment:
+#        GF_INSTALL_PLUGINS: "yesoreyeram-boomtheme-panel"
+  nginx:
+    # request the index page via
+    # http://localhost:3080
+    image: nginx
+    restart: always
+    ports:
+      - "3080:80"
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./html:/usr/share/nginx/html
+
   video:
     # test video stream (use a video player like VLC to test)
     # rtsp://localhost:8554/test

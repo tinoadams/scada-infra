@@ -2,6 +2,7 @@ apiVersion: 1
 
 providers:
   - name: dashboards
+    allowUiUpdates: true
     type: file
     updateIntervalSeconds: 30
     options:

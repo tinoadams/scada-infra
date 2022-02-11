@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <iframe src="http://localhost:3080/graphs/d-solo/21aYM4xnz/new-dashboard?orgId=1&from=1644216831659&to=1644238431659&panelId=4&kiosk" width="450" height="200" frameborder="0"></iframe>
+<script>
+var delayInMilliseconds = 500; // half a second
+
+setTimeout(function() { 
+    var iframe = document.getElementsByTagName('iframe')[0];
+    var y = (iframe.contentWindow || iframe.contentDocument);
+    if (y.document) y = y.document;
+    y.body.style.backgroundColor = 'white';
+}, delayInMilliseconds);        
+</script>
+</body>
+</html>
