@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1644903463530,
+  "iteration": 1644903463534,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -39,7 +39,7 @@
         "mode": "markdown"
       },
       "pluginVersion": "8.3.4",
-      "title": "Side A of ${machine_name}",
+      "title": "Side A of ${machine_serial}",
       "type": "text"
     },
     {
@@ -55,7 +55,7 @@
         "mode": "markdown"
       },
       "pluginVersion": "8.3.4",
-      "title": "Side A of ${machine_name}",
+      "title": "Side A of ${machine_serial}",
       "type": "text"
     },
     {
@@ -112,7 +112,7 @@
             "uid": "my_unique_uid"
           },
           "refId": "A",
-          "target": "randomWalk(\"machines.${machine_name}\")",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
           "textEditor": true
         }
       ],
@@ -173,7 +173,7 @@
             "uid": "my_unique_uid"
           },
           "refId": "A",
-          "target": "randomWalk(\"machines.${machine_name}\")",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
           "textEditor": true
         }
       ],
@@ -234,7 +234,7 @@
             "uid": "my_unique_uid"
           },
           "refId": "A",
-          "target": "randomWalk(\"machines.${machine_name}\")",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
           "textEditor": true
         }
       ],
@@ -295,7 +295,7 @@
             "uid": "my_unique_uid"
           },
           "refId": "A",
-          "target": "randomWalk(\"machines.${machine_name}\")",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
           "textEditor": true
         }
       ],
@@ -303,26 +303,38 @@
       "type": "bargauge"
     },
     {
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 5
-      },
-      "id": 11,
-      "options": {
-        "content": "",
-        "mode": "markdown"
-      },
-      "pluginVersion": "8.3.4",
-      "title": "Old Test Charts",
-      "type": "text"
-    },
-    {
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "fixed"
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
           },
           "mappings": [],
           "thresholds": {
@@ -345,36 +357,32 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 6
+        "y": 5
       },
-      "id": 4,
+      "id": 14,
       "options": {
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "bottom"
         },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "text": {}
+        "tooltip": {
+          "mode": "single"
+        }
       },
-      "pluginVersion": "8.3.4",
       "targets": [
         {
           "datasource": {
             "type": "graphite",
-            "uid": "my_unique_uid"
+            "uid": "-DmtM4b7z"
           },
           "refId": "A",
-          "target": "randomWalk(\"machines.test1\")",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
           "textEditor": true
         }
       ],
       "transparent": true,
-      "type": "gauge"
+      "type": "timeseries"
     },
     {
       "fieldConfig": {
@@ -431,7 +439,253 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 6
+        "y": 5
+      },
+      "id": 15,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "-DmtM4b7z"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 10
+      },
+      "id": 13,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "-DmtM4b7z"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 12,
+        "y": 10
+      },
+      "id": 17,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "-DmtM4b7z"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 15
       },
       "id": 2,
       "options": {
@@ -451,12 +705,168 @@
             "uid": "-DmtM4b7z"
           },
           "refId": "A",
-          "target": "randomWalk(\"machines.test1\")",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
           "textEditor": true
         }
       ],
       "transparent": true,
       "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 12,
+        "y": 15
+      },
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "-DmtM4b7z"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "id": 11,
+      "options": {
+        "content": "",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.3.4",
+      "title": "Old Test Charts",
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 21
+      },
+      "id": 4,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.test1\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "gauge"
     }
   ],
   "schemaVersion": 34,
@@ -466,14 +876,14 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "machine_1",
           "value": "machine_1"
         },
         "hide": 0,
         "includeAll": false,
         "multi": false,
-        "name": "machine_name",
+        "name": "machine_serial",
         "options": [
           {
             "selected": true,
@@ -501,6 +911,6 @@
   "timezone": "",
   "title": "Machine dashboard",
   "uid": "21aYM4xnz",
-  "version": 5,
+  "version": 10,
   "weekStart": ""
 }
