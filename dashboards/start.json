@@ -21,14 +21,308 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 1,
+  "iteration": 1644903463530,
   "links": [],
   "liveNow": false,
   "panels": [
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "content": "",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.3.4",
+      "title": "Side A of ${machine_name}",
+      "type": "text"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "content": "",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.3.4",
+      "title": "Side A of ${machine_name}",
+      "type": "text"
+    },
     {
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 10,
+          "min": -10,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0.5
+              }
+            ]
+          },
+          "unit": "FPM"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 5,
+      "options": {
+        "displayMode": "basic",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_name}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 10,
+          "min": -10,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0.5
+              }
+            ]
+          },
+          "unit": "FPM"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 7,
+      "options": {
+        "displayMode": "basic",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_name}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 10,
+          "min": -10,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0.5
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 0,
+        "y": 3
+      },
+      "id": 6,
+      "options": {
+        "displayMode": "basic",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_name}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 10,
+          "min": -10,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0.5
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 3
+      },
+      "id": 8,
+      "options": {
+        "displayMode": "basic",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_name}\")",
+          "textEditor": true
+        }
+      ],
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 5
+      },
+      "id": 11,
+      "options": {
+        "content": "",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.3.4",
+      "title": "Old Test Charts",
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
           },
           "mappings": [],
           "thresholds": {
@@ -48,10 +342,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 5,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 6
       },
       "id": 4,
       "options": {
@@ -64,7 +358,8 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
       "pluginVersion": "8.3.4",
       "targets": [
@@ -78,7 +373,7 @@
           "textEditor": true
         }
       ],
-      "title": "Gauge test",
+      "transparent": true,
       "type": "gauge"
     },
     {
@@ -133,16 +428,16 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 5,
         "w": 12,
-        "x": 0,
-        "y": 8
+        "x": 12,
+        "y": 6
       },
       "id": 2,
       "options": {
         "legend": {
           "calcs": [],
-          "displayMode": "list",
+          "displayMode": "hidden",
           "placement": "bottom"
         },
         "tooltip": {
@@ -160,7 +455,7 @@
           "textEditor": true
         }
       ],
-      "title": "Time series test",
+      "transparent": true,
       "type": "timeseries"
     }
   ],
@@ -168,7 +463,35 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "machine_1",
+          "value": "machine_1"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "machine_name",
+        "options": [
+          {
+            "selected": true,
+            "text": "machine_1",
+            "value": "machine_1"
+          },
+          {
+            "selected": false,
+            "text": "machine_2",
+            "value": "machine_2"
+          }
+        ],
+        "query": "machine_1,machine_2",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
   },
   "time": {
     "from": "now-6h",
@@ -176,8 +499,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "New dashboard",
+  "title": "Machine dashboard",
   "uid": "21aYM4xnz",
-  "version": 1,
+  "version": 5,
   "weekStart": ""
 }
