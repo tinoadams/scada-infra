@@ -8,28 +8,20 @@ On the shell in this project directory execute
 docker-compose up
 ```
 
-### Query test metric raw data
-
-Get data from Graphite
+### query test metric raw data
 
 http://localhost:8080/render?format=json&target=randomWalk(%22machines.test1%22)
 
-### Default dashboard
-
-Open default dashboard
+### default dashboard
 
 http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
 
-user/pass: admin/admin
+### test embed
 
-### Sample embedded graph
+http://localhost:3000/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
 
-Open
+### request the index page via
+http://localhost:3080
 
-index.html
-
-### Video stream
-
-Test the video stream with a video player like VLC
-
+### test video stream (use a video player like VLC to test)
 rtsp://localhost:8554/test
