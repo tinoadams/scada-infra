@@ -21,7 +21,7 @@ services:
     # http://localhost:3000/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
     depends_on:
       - graphite
-    image: grafana/grafana-oss:latest
+    image: grafana/grafana-oss@sha256:cf81d2c753c8d14cf0324d881e49f42d400347d256e473856e1bda02eb520a99
     restart: always
     ports:
       - "3000:3000"
