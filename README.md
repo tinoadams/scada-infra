@@ -18,7 +18,13 @@ http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
 
 ### test embed
 
-http://localhost:3000/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
+http://localhost:3000/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
+
+### nginx reverse proxy
+
+http://localhost:3080/graphs/d/21aYM4xnz/new-dashboard?orgId=1
+
+http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
 
 ### request the index page via
 http://localhost:3080
