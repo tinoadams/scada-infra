@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1644903463534,
+  "iteration": 1645530890389,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -59,6 +59,250 @@
       "type": "text"
     },
     {
+      "backgroundColor": "rgba(128,128,128,0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:263",
+          "color": "#56A64B",
+          "text": "RUNNING"
+        },
+        {
+          "$$hashKey": "object:266",
+          "color": "#E02F44",
+          "text": "STOPPED"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "highlightOnMouseover": false,
+      "id": 19,
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "metricNameColor": "#000000",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:35",
+          "from": "-100",
+          "text": "STOPPED",
+          "to": "0"
+        },
+        {
+          "$$hashKey": "object:39",
+          "from": "0",
+          "text": "RUNNING",
+          "to": "100"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendValues": true,
+      "showTimeAxis": false,
+      "showTransitionCount": true,
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
+          "textEditor": true
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "#d8d9da",
+      "transformations": [],
+      "transparent": true,
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:148",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "#ffffff",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
+      "backgroundColor": "rgba(128,128,128,0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:263",
+          "color": "#56A64B",
+          "text": "RUNNING"
+        },
+        {
+          "$$hashKey": "object:266",
+          "color": "#E02F44",
+          "text": "STOPPED"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "highlightOnMouseover": false,
+      "id": 20,
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "metricNameColor": "#000000",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:35",
+          "from": "-100",
+          "text": "STOPPED",
+          "to": "0"
+        },
+        {
+          "$$hashKey": "object:39",
+          "from": "0",
+          "text": "RUNNING",
+          "to": "100"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendValues": true,
+      "showTimeAxis": false,
+      "showTransitionCount": true,
+      "targets": [
+        {
+          "datasource": {
+            "type": "graphite",
+            "uid": "my_unique_uid"
+          },
+          "refId": "A",
+          "target": "randomWalk(\"machines.${machine_serial}\")",
+          "textEditor": true
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "#d8d9da",
+      "transformations": [],
+      "transparent": true,
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:242",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "#ffffff",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -88,7 +332,7 @@
         "h": 2,
         "w": 12,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "id": 5,
       "options": {
@@ -149,7 +393,7 @@
         "h": 2,
         "w": 12,
         "x": 12,
-        "y": 1
+        "y": 4
       },
       "id": 7,
       "options": {
@@ -210,7 +454,7 @@
         "h": 2,
         "w": 12,
         "x": 0,
-        "y": 3
+        "y": 6
       },
       "id": 6,
       "options": {
@@ -271,7 +515,7 @@
         "h": 2,
         "w": 12,
         "x": 12,
-        "y": 3
+        "y": 6
       },
       "id": 8,
       "options": {
@@ -357,7 +601,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 8
       },
       "id": 14,
       "options": {
@@ -439,7 +683,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 8
       },
       "id": 15,
       "options": {
@@ -521,7 +765,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 10
+        "y": 13
       },
       "id": 13,
       "options": {
@@ -603,7 +847,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 10
+        "y": 13
       },
       "id": 17,
       "options": {
@@ -685,7 +929,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 15
+        "y": 18
       },
       "id": 2,
       "options": {
@@ -767,7 +1011,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 15
+        "y": 18
       },
       "id": 16,
       "options": {
@@ -799,7 +1043,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 23
       },
       "id": 11,
       "options": {
@@ -837,7 +1081,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 21
+        "y": 24
       },
       "id": 4,
       "options": {
@@ -911,6 +1155,6 @@
   "timezone": "",
   "title": "Machine dashboard",
   "uid": "21aYM4xnz",
-  "version": 10,
+  "version": 9,
   "weekStart": ""
 }
