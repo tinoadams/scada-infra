@@ -14,14 +14,12 @@ services:
       - "8126:8126"
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
+
   grafana:
     # default dashboard
     # http://localhost:3000/d/21aYM4xnz/new-dashboard?orgId=1
     # test embed
     # http://localhost:3000/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
-    # nginx reverse proxy
-    # http://localhost:3080/graphs/d/21aYM4xnz/new-dashboard?orgId=1
-    # http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
     depends_on:
       - graphite
     image: grafana/grafana-oss@sha256:cf81d2c753c8d14cf0324d881e49f42d400347d256e473856e1bda02eb520a99
@@ -34,26 +32,21 @@ services:
       - ./config/grafana.ini:/etc/grafana/grafana.ini
     environment:
         GF_INSTALL_PLUGINS: "natel-discrete-panel"
+
   nginx:
     # request the index page via
     # http://localhost:3080
-    image: nginx
+    # rtmp://localhost:1935/vod/file_example_MP4_480_1_5MG.mp4
+
+    # nginx grafana proxy
+    # http://localhost:3080/graphs/d/21aYM4xnz/new-dashboard?orgId=1
+    # http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
+
+    image: tiangolo/nginx-rtmp
     restart: always
     ports:
       - "3080:80"
+      - "1935:1935"
     volumes:
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./html:/usr/share/nginx/html
-
-  video:
-    # test video stream (use a video player like VLC to test)
-    # rtsp://localhost:8554/test
-    image: aler9/rtsp-simple-server:latest
-    restart: always
-    ports:
-      - "8554:8554"
-      - "1935:1935"
-      - "8888:8888"
-    environment:
-      RTSP_PROTOCOLS: tcp
-      RTSP_PATHS_TEST_SOURCE: rtsp://rtsp.stream/pattern

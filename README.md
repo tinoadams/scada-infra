@@ -26,8 +26,9 @@ http://localhost:3080/graphs/d/21aYM4xnz/new-dashboard?orgId=1
 
 http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
 
+
 ### request the index page via
 http://localhost:3080
 
 ### test video stream (use a video player like VLC to test)
-rtsp://localhost:8554/test
+rtmp://localhost:1935/vod/file_example_MP4_480_1_5MG.mp4

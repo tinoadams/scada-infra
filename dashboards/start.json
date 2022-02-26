@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1645530890389,
+  "iteration": 1645532087146,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -70,6 +70,11 @@
           "$$hashKey": "object:266",
           "color": "#E02F44",
           "text": "STOPPED"
+        },
+        {
+          "$$hashKey": "object:397",
+          "color": "#FF780A",
+          "text": "DEGRADED"
         }
       ],
       "crosshairColor": "#8F070C",
@@ -92,12 +97,18 @@
           "$$hashKey": "object:35",
           "from": "-100",
           "text": "STOPPED",
-          "to": "0"
+          "to": "-3"
         },
         {
           "$$hashKey": "object:39",
-          "from": "0",
+          "from": "-3",
           "text": "RUNNING",
+          "to": "3"
+        },
+        {
+          "$$hashKey": "object:395",
+          "from": "3",
+          "text": "DEGRADED",
           "to": "100"
         }
       ],
@@ -192,6 +203,11 @@
           "$$hashKey": "object:266",
           "color": "#E02F44",
           "text": "STOPPED"
+        },
+        {
+          "$$hashKey": "object:397",
+          "color": "#FF780A",
+          "text": "DEGRADED"
         }
       ],
       "crosshairColor": "#8F070C",
@@ -214,12 +230,18 @@
           "$$hashKey": "object:35",
           "from": "-100",
           "text": "STOPPED",
-          "to": "0"
+          "to": "-3"
         },
         {
           "$$hashKey": "object:39",
-          "from": "0",
+          "from": "-3",
           "text": "RUNNING",
+          "to": "3"
+        },
+        {
+          "$$hashKey": "object:395",
+          "from": "3",
+          "text": "DEGRADED",
           "to": "100"
         }
       ],
@@ -291,7 +313,7 @@
       "useTimePrecision": false,
       "valueMaps": [
         {
-          "$$hashKey": "object:242",
+          "$$hashKey": "object:148",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -1155,6 +1177,6 @@
   "timezone": "",
   "title": "Machine dashboard",
   "uid": "21aYM4xnz",
-  "version": 9,
+  "version": 12,
   "weekStart": ""
 }
