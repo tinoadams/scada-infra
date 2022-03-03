@@ -26,6 +26,7 @@ http://localhost:3080/graphs/d/21aYM4xnz/new-dashboard?orgId=1
 
 http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
 
+http://localhost:3080/dashboard/machine?machine_name=01&machine_serial=APA-AU-1231-34-X
 
 ### request the index page via
 http://localhost:3080
