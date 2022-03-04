@@ -36,11 +36,16 @@ services:
   nginx:
     # request the index page via
     # http://localhost:3080
+
+    # sample video
     # rtmp://localhost:1935/vod/file_example_MP4_480_1_5MG.mp4
+    # rtmp://localhost:1935/vod/mp4:file_example_MP4_480_1_5MG.mp4
 
     # nginx grafana proxy
     # http://localhost:3080/graphs/d/21aYM4xnz/new-dashboard?orgId=1
     # http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now-1h&to=now&panelId=5&refresh=5s&kiosk&var-machine_name=machine_2
+    
+    # nginx dashboard proxy
     # http://localhost:3080/dashboard/machine?machine_name=01&machine_serial=APA-AU-1231-34-X
 
     image: tiangolo/nginx-rtmp

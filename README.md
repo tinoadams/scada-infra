@@ -29,7 +29,11 @@ http://localhost:3080/graphs/d-solo/21aYM4xnz/machine-dashboard?orgId=1&from=now
 http://localhost:3080/dashboard/machine?machine_name=01&machine_serial=APA-AU-1231-34-X
 
 ### request the index page via
+
 http://localhost:3080
 
 ### test video stream (use a video player like VLC to test)
+
 rtmp://localhost:1935/vod/file_example_MP4_480_1_5MG.mp4
+
+rtmp://localhost:1935/vod/mp4:file_example_MP4_480_1_5MG.mp4
